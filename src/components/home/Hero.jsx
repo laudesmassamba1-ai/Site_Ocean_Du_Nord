@@ -98,8 +98,8 @@ export default function Hero({ onNavigate }) {
             onCanPlay={startVideo}
             className="hero-video pointer-events-none h-full w-full object-cover opacity-55 sm:opacity-40"
           >
-            <source src="/media/fleuve-fond.mp4" type="video/mp4" />
-            <source src="/media/fleuve-fond.webm" type="video/webm" />
+            <source src={`${import.meta.env.BASE_URL}media/fleuve-fond.mp4`} type="video/mp4" />
+            <source src={`${import.meta.env.BASE_URL}media/fleuve-fond.webm`} type="video/webm" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-b from-forest/80 via-forest/45 to-forest-deep/95 sm:from-forest/70 sm:via-forest/60 sm:to-forest-deep/85" />
         </div>
