@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Océan du Nord – Le Congo se traverse en bus</title>
+<meta name="description" content="Découvrez les lignes, agences et services d’Océan du Nord. Préparez votre trajet au Congo-Brazzaville.">
+<meta name="theme-color" content="#073c2d">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap">
+<style>
+:root{--mut:#c6dbd7;--sun:#ffc933;--grn:#2fd18b;--red:#ff6b57;color-scheme:dark;box-sizing:border-box;padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;color:#fff;background:#0b2a3d;font:16px/1.5 "Bricolage Grotesque",system-ui,sans-serif;overflow-x:hidden}
+.sky{position:fixed;inset:0;z-index:-3;background:linear-gradient(180deg,#0b2a3d 0%,#14625f 42%,#e98f4f 84%,#ffd27a 100%)}
+.blob{position:fixed;z-index:-2;border-radius:50%;filter:blur(70px);opacity:.5;animation:fl 18s ease-in-out infinite alternate}
+.b1{width:46vw;height:46vw;left:-10vw;top:8vh;background:#2fd18b}
+.b2{width:36vw;height:36vw;right:-8vw;top:34vh;background:#ffc933;animation-delay:-6s}
+.b3{width:30vw;height:30vw;left:34vw;bottom:-12vh;background:#ff6b57;animation-delay:-11s}
+@keyframes fl{to{transform:translate(6vw,-6vh) scale(1.18)}}
+.sun{position:fixed;z-index:-2;right:16vw;bottom:24vh;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle,#fff3c4 0%,#ffc933 45%,#ff9a3c00 72%);animation:pul 6s ease-in-out infinite}
+@keyframes pul{50%{transform:scale(1.12);opacity:.85}}
+.hills{position:fixed;left:0;bottom:0;width:100%;height:36vh;z-index:-1;pointer-events:none}
+.hills g{will-change:transform}
+.glass{position:relative;overflow:hidden;border-radius:28px;background:linear-gradient(135deg,rgba(255,255,255,.2),rgba(255,255,255,.04)),rgba(6,32,38,.38);-webkit-backdrop-filter:blur(22px) saturate(1.8);backdrop-filter:blur(22px) saturate(1.8);border:1px solid rgba(255,255,255,.26);box-shadow:inset 0 1px 0 rgba(255,255,255,.6),inset 0 -1px 0 rgba(255,255,255,.1),inset 0 0 30px rgba(255,255,255,.05),0 24px 60px rgba(0,0,0,.3);transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.glass::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(260px circle at var(--mx,20%) var(--my,0%),rgba(255,255,255,.3),transparent 62%);opacity:.7}
+.lift:hover{transform:translateY(-4px)}
+.wrap{max-width:1140px;margin:0 auto;padding:0 16px}
+section{padding:54px 0}
+h1,h2,h3{margin:0;line-height:1}
+h1{font-size:clamp(2.7rem,7.4vw,5.9rem);font-weight:800;letter-spacing:-.035em}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--sun),#ff8f4a);-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{font-size:clamp(2rem,4.5vw,3.2rem);font-weight:750;letter-spacing:-.025em}
+.lead{color:var(--mut);max-width:58ch;margin:12px 0 26px;font-size:1.05rem}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.btn{border:0;cursor:pointer;font-weight:700;padding:13px 22px;border-radius:99px;color:#1b1400;background:linear-gradient(180deg,#ffe07a,var(--sun));box-shadow:inset 0 1px 0 #fff9,0 8px 24px rgba(255,201,51,.35);transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px) scale(1.03)}
+.btn.g{color:#fff;background:rgba(255,255,255,.14);box-shadow:inset 0 1px 0 #fff5}
+.btn[disabled]{opacity:.45;cursor:not-allowed;transform:none}
+.nav{position:fixed;z-index:50;top:calc(12px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);width:min(980px,calc(100% - 20px));display:flex;align-items:center;gap:10px;padding:8px 10px 8px 18px;border-radius:99px}
+.logo{font-weight:800;font-size:1.25rem;letter-spacing:-.03em;text-decoration:none;display:flex;align-items:center;gap:8px;white-space:nowrap}
+.logo i{width:16px;height:16px;border-radius:50%;background:conic-gradient(var(--grn),var(--sun),var(--red),var(--grn));animation:spin 6s linear infinite}
+@keyframes spin{to{transform:rotate(1turn)}}
+.nav nav{margin-left:auto;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+.nav a{color:#fff;text-decoration:none;font-weight:600;padding:8px 13px;border-radius:99px;white-space:nowrap;font-size:.95rem}
+.nav nav a:hover{background:rgba(255,255,255,.16)}
+.hero{padding:120px 0 20px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:26px;align-items:center}
+.in{opacity:0;transform:translateY(26px);animation:up .9s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(var(--i,0)*130ms)}
+@keyframes up{to{opacity:1;transform:none}}
+.search{margin-top:26px;padding:16px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.search label,dialog label{display:grid;gap:4px;font-size:.8rem;color:var(--mut);font-weight:600;position:relative;z-index:1}
+.search select,.search input,dialog input,dialog select,.fi{padding:11px 13px;border-radius:14px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.1);font-size:1rem}
+select option{color:#111}
+.search .btn{grid-column:1/-1;position:relative;z-index:1}
+.map{padding:14px}
+.map svg{display:block;width:100%;height:auto;max-height:560px;position:relative;z-index:1}
+.land{fill:rgba(255,255,255,.14);stroke:rgba(255,255,255,.7);stroke-width:1.6;stroke-linejoin:round}
+.rt{fill:none;stroke:var(--sun);stroke-width:2;stroke-dasharray:4 5;opacity:.7;cursor:pointer;transition:opacity .2s,stroke-width .2s;animation:dash 1.4s linear infinite}
+.rt.on,.rt:hover{opacity:1;stroke-width:3.4;stroke:#fff}
+@keyframes dash{to{stroke-dashoffset:-18}}
+.hit{fill:none;stroke:transparent;stroke-width:16;cursor:pointer}
+.city{cursor:pointer}
+.city circle.p{fill:var(--grn);opacity:.5;animation:ping 2.4s ease-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes ping{to{transform:scale(3.2);opacity:0}}
+.city text{font-size:11px;font-weight:700;fill:#fff;paint-order:stroke;stroke:rgba(5,25,30,.7);stroke-width:3px}
+.road{position:relative;height:84px;margin-top:6px;overflow:hidden}
+.road::after{content:"";position:absolute;left:0;right:0;bottom:12px;height:3px;background:repeating-linear-gradient(90deg,#fff8 0 24px,transparent 24px 48px);animation:rd 1s linear infinite}
+@keyframes rd{to{background-position:-48px 0}}
+.bus{position:absolute;bottom:14px;left:-260px;width:240px;animation:drive 16s linear infinite}
+@keyframes drive{to{transform:translateX(calc(100vw + 300px))}}
+.trips{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:14px}
+.trip{padding:20px;display:grid;gap:10px}
+.trip.sel{outline:2px solid var(--sun)}
+.trip h3{font-size:1.55rem;font-weight:750;letter-spacing:-.02em;position:relative;z-index:1}
+.trip p{margin:0;color:var(--mut);font-size:.92rem;position:relative;z-index:1}
+.row2{display:flex;justify-content:space-between;align-items:end;gap:10px;position:relative;z-index:1}
+.price{font-size:1.8rem;font-weight:800;letter-spacing:-.03em;line-height:1}
+.price small{display:block;font-size:.75rem;font-weight:500;color:var(--mut);letter-spacing:0;margin-top:4px}
+.empty{padding:26px;color:var(--mut);grid-column:1/-1}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.svc{padding:26px;position:relative}
+.svc svg{width:44px;height:44px;stroke:var(--sun);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;position:relative;z-index:1;transition:transform .4s}
+.svc:hover svg{transform:rotate(-8deg) scale(1.15)}
+.svc h3{font-size:1.5rem;margin:14px 0 8px;font-weight:750;position:relative;z-index:1}
+.svc p{margin:0;color:var(--mut);position:relative;z-index:1}
+.track{padding:20px}
+.tf{display:flex;gap:10px;flex-wrap:wrap;position:relative;z-index:1}
+.tf input{flex:1;min-width:200px}
+.steps{display:flex;justify-content:space-between;position:relative;margin:30px 6px 6px;z-index:1}
+.steps::before{content:"";position:absolute;left:0;right:0;top:9px;height:4px;border-radius:4px;background:rgba(255,255,255,.2)}
+.steps u{position:absolute;left:0;top:9px;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--grn),var(--sun));width:0;transition:width 1.4s cubic-bezier(.2,.7,.2,1)}
+.steps span{position:relative;width:22px;height:22px;border-radius:50%;background:#12404a;border:3px solid rgba(255,255,255,.35);transition:.5s}
+.steps span.on{background:var(--sun);border-color:#fff;box-shadow:0 0 18px var(--sun)}
+.steps span b{position:absolute;top:30px;left:50%;transform:translateX(-50%);font-size:.72rem;font-weight:600;color:var(--mut);width:84px;text-align:center}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.chip{border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);border-radius:99px;padding:7px 16px;cursor:pointer;font-weight:600}
+.chip[aria-pressed="true"]{background:#fff;color:#0b2a3d}
+.ags{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.ag{padding:18px}
+.ag h3{font-size:1.15rem;font-weight:750;position:relative;z-index:1}
+.ag p,.ag a{margin:5px 0 0;font-size:.9rem;color:var(--mut);display:block;position:relative;z-index:1}
+.ag a{color:var(--sun);font-weight:700;text-decoration:none}
+.ag .axe{display:inline-block;font-size:.75rem;padding:2px 10px;border-radius:99px;background:rgba(255,255,255,.14);margin-top:6px;position:relative;z-index:1}
+.onc{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center}
+.card3d{perspective:900px}
+.vcard{aspect-ratio:1.6;max-width:430px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;transition:transform .15s;background:linear-gradient(135deg,rgba(47,209,139,.55),rgba(255,201,51,.4) 55%,rgba(255,107,87,.5)),rgba(6,32,38,.3)}
+.vcard b{font-size:1.3rem;letter-spacing:-.02em;position:relative;z-index:1}
+.vcard .n{font-size:2.6rem;font-weight:800;letter-spacing:-.04em;position:relative;z-index:1}
+.vcard small{position:relative;z-index:1}
+.meter{height:8px;border-radius:8px;background:rgba(255,255,255,.2);overflow:hidden;margin:10px 0}
+.meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--grn),var(--sun));transition:width 1s}
+.of{display:grid;gap:10px;padding:22px;position:relative}
+.of>*{position:relative;z-index:1}
+footer{padding:36px 0 50px;color:var(--mut)}
+dialog{border:0;padding:0;color:#fff;max-width:450px;width:calc(100% - 26px);background:rgba(8,36,42,.78);-webkit-backdrop-filter:blur(28px) saturate(1.6);backdrop-filter:blur(28px) saturate(1.6);border-radius:28px;border:1px solid rgba(255,255,255,.3);box-shadow:inset 0 1px 0 #fff7,0 30px 80px #0008;animation:pop .45s cubic-bezier(.2,.9,.3,1.2)}
+dialog::backdrop{background:rgba(0,12,16,.55)}
+@keyframes pop{from{opacity:0;transform:scale(.9) translateY(20px)}}
+.dc{padding:22px;display:grid;gap:11px}
+.pay label{flex-direction:row;display:flex;gap:8px;align-items:center;color:#fff;font-size:.95rem;padding:10px 12px;border:1px solid rgba(255,255,255,.25);border-radius:14px;margin-bottom:6px}
+.ticket{border:2px dashed rgba(255,255,255,.4);border-radius:18px;padding:16px}
+.ticket .ref{font-size:2.4rem;font-weight:800;color:var(--sun);letter-spacing:-.03em}
+@media (max-width:860px){.hero .wrap,.onc{grid-template-columns:1fr}.grid3{grid-template-columns:1fr}.nav nav a{padding:8px 9px;font-size:.88rem}.sun{display:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.in{opacity:1;transform:none}}
+
+/* Identité Océan du Nord : vert Congo, soleil et surfaces plus lisibles. */
+:root{--mut:#d7e6de;--sun:#f4c542;--grn:#12a45b;--red:#e63b3b;color-scheme:dark}
+body{background:#073c2d;color:#fff}
+.sky{background:linear-gradient(155deg,#062d27 0%,#07553a 52%,#a66b35 100%)}
+.blob{opacity:.26;filter:blur(90px)}
+.b1{background:#12a45b}.b2{background:#f4c542}.b3{background:#e63b3b}
+.nav{background:rgba(4,37,29,.88);border-color:rgba(255,255,255,.16);box-shadow:0 12px 40px #001a1266,inset 0 1px 0 #ffffff38}
+.logo{gap:10px}.logo img{display:block;width:145px;height:auto;max-height:44px;object-fit:contain;border-radius:6px}
+.logo i{display:none}
+.nav nav a{transition:background .2s,color .2s}
+.nav nav a:hover{background:rgba(244,197,66,.18);color:var(--sun)}
+.btn{background:linear-gradient(180deg,#ffe27e,var(--sun));box-shadow:0 8px 24px rgba(244,197,66,.24),inset 0 1px 0 #fff9}
+.btn.g{background:rgba(255,255,255,.12)}
+.hero{padding-top:150px}
+.hero h1{max-width:13ch}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;margin:0 0 16px;padding:7px 12px;border:1px solid #ffffff38;border-radius:99px;background:#ffffff12;color:#fbe28d;font-size:.82rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.eyebrow i{display:block;width:8px;height:8px;border-radius:50%;background:var(--grn);box-shadow:0 0 0 4px #12a45b32}
+.search{background:linear-gradient(145deg,#ffffff1c,#06271fbb);border-color:#ffffff36}
+.search select,.search input,dialog input,dialog select,.fi{min-height:48px;background:rgba(3,28,23,.6);border-color:#ffffff3b}
+.search label{color:#e2eee7}
+.map{background:linear-gradient(145deg,#ffffff22,#06271fbb);border-color:#ffffff40}
+section{padding:66px 0}
+section h2{max-width:20ch}
+.lead{color:#d7e6de}
+.story{display:grid;grid-template-columns:1.05fr .95fr;gap:26px;align-items:center;padding:22px}
+.story figure{margin:0;position:relative;min-height:270px;overflow:hidden;border-radius:20px;background:#092b25}
+.story figure::after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,#06271fd9)}
+.story img{position:absolute;width:100%;height:100%;inset:0;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.story:hover img{transform:scale(1.04)}
+.story figcaption{position:absolute;z-index:1;left:18px;bottom:16px;color:white;font-size:.9rem;font-weight:700}
+.story-copy{padding:14px 10px}
+.story-copy h2{font-size:clamp(1.8rem,4vw,2.8rem)}
+.story-copy p{color:var(--mut)}
+.story-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.story-tags span{border:1px solid #ffffff34;border-radius:99px;padding:7px 12px;color:#fff;font-size:.85rem;background:#ffffff0e}
+.trip,.svc,.ag,.track,.of{background:linear-gradient(145deg,#ffffff1d,#06271fbb);border-color:#ffffff2e}
+.trip{padding:22px}
+.trip .btn{min-height:46px}
+.ag a{min-height:30px;display:flex;align-items:center}
+.chip{min-height:42px}
+.onc-poster{margin:0;padding:10px;border:1px solid #ffffff40;border-radius:22px;background:#fff;box-shadow:0 24px 60px #001a1255;overflow:hidden}
+.onc-poster img{display:block;width:100%;height:auto;border-radius:13px}
+.onc-poster figcaption{padding:10px 5px 2px;color:#45534c;font-size:.82rem;line-height:1.4}
+.onc-copy{display:grid;gap:8px}
+.onc-copy .lead{margin-bottom:8px}
+.onc-copy .card3d{max-width:430px}
+.onc-copy .vcard{min-height:190px;max-width:100%;border-color:#ffffff4a}
+.onc-copy .of{max-width:430px}
+.onc-copy .of button{min-height:48px}
+.mobile-book{display:none}
+footer{border-top:1px solid #ffffff24;background:#04281f55}
+dialog{background:rgba(4,37,29,.97);border-color:#ffffff40}
+dialog label{color:#d7e6de}
+dialog input,dialog select{width:100%;color:#fff}
+.pay label{min-height:48px}
+.ticket{background:#ffffff0c}
+@media(max-width:860px){
+ .hero{padding-top:136px}
+ .story{grid-template-columns:1fr;gap:14px}
+ .story figure{min-height:240px}
+ .onc{grid-template-columns:1fr;gap:18px}
+ .onc-poster{max-width:620px;margin:0 auto}
+ .onc-copy .card3d,.onc-copy .of{max-width:none}
+ .onc-copy .vcard{max-width:430px}
+}
+@media(max-width:600px){
+ html{scroll-padding-top:112px}
+ body{font-size:15px}
+ .wrap{padding:0 14px}
+ .nav{top:calc(8px + env(safe-area-inset-top,0px));width:calc(100% - 16px);padding:7px 10px 8px 13px;border-radius:22px;gap:3px;flex-wrap:wrap}
+ .logo{font-size:1rem;min-height:38px}
+ .logo img{width:124px;max-height:37px}
+ .nav nav{width:100%;flex:1 0 100%;margin:0;gap:3px;padding:1px 0 2px;overscroll-behavior-x:contain}
+ .nav nav a{font-size:.82rem;padding:7px 11px}
+ .hero{padding-top:132px}
+ .hero .wrap{gap:18px}
+ h1{font-size:clamp(2.6rem,12vw,4rem)}
+ h2{font-size:clamp(1.9rem,9vw,2.6rem)}
+ .lead{font-size:.98rem}
+ .search{grid-template-columns:1fr 1fr;padding:13px;gap:9px;border-radius:22px}
+ .search label{font-size:.77rem}
+ .search select,.search input{padding:10px 9px;font-size:.95rem;min-width:0}
+ .search .btn{min-height:50px}
+ .map{padding:7px;border-radius:22px}
+ .map svg{max-height:400px}
+ .road{height:70px}
+ section{padding:48px 0}
+ .trips{grid-template-columns:1fr;gap:11px}
+ .trip{padding:17px;border-radius:22px}
+ .trip h3{font-size:1.32rem}
+ .row2{align-items:center}
+ .price{font-size:1.45rem}
+ .price small{font-size:.7rem}
+ .row2 .btn{padding:12px 15px}
+ .grid3{gap:11px}
+ .svc{padding:21px;border-radius:22px}
+ .track{padding:14px;border-radius:22px}
+ .tf{display:grid;grid-template-columns:1fr}
+ .tf input,.tf button{min-height:50px}
+ .ags{grid-template-columns:1fr}
+ .ag{padding:17px;border-radius:20px}
+ .story{padding:12px;border-radius:23px}
+ .story figure{min-height:205px}
+ .story-copy{padding:8px 6px 12px}
+ .story-copy h2{font-size:2rem}
+ .onc-poster{padding:6px;border-radius:18px}
+ .onc-poster figcaption{font-size:.76rem}
+ .onc-copy .vcard{min-height:165px;padding:19px}
+ .onc-copy .vcard .n{font-size:2.1rem}
+ .of{padding:15px;border-radius:20px}
+ .of input{width:100%;min-height:50px}
+ .mobile-book{display:block;position:fixed;z-index:49;left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom,0px));padding:7px;border:1px solid #ffffff44;border-radius:18px;background:rgba(4,37,29,.92);box-shadow:0 10px 32px #001a1277;-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px)}
+ .mobile-book .btn{display:block;width:100%;min-height:49px}
+ footer{padding-bottom:calc(90px + env(safe-area-inset-bottom,0px))}
+ dialog{width:calc(100% - 16px);max-width:none;max-height:calc(100dvh - 18px);margin:auto 8px 8px;border-radius:24px}
+ .dc{padding:17px}
+ .dc[style*="padding:0"]{padding:0!important}
+}
+@media(prefers-reduced-motion:reduce){.story img{transition:none}}
+</style>
+</head>
+<body>
+<div class="sky"></div><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="sun"></div>
+<svg class="hills" viewBox="0 0 1200 300" preserveAspectRatio="none" aria-hidden="true">
+<g id="h1"><path d="M0 120 C150 40 300 150 480 90 S800 20 1000 100 S1150 80 1200 70 V330 H0Z" fill="#0f4a45" opacity=".75"/></g>
+<g id="h2"><path d="M0 180 C200 110 330 200 520 150 S860 100 1050 170 S1160 150 1200 140 V330 H0Z" fill="#0a3a38" opacity=".92"/></g>
+<g id="h3"><path d="M0 240 C220 190 400 260 620 220 S980 190 1200 230 V330 H0Z" fill="#062824"/></g>
+</svg>
+
+<header class="nav glass"><a class="logo" href="#top" aria-label="Océan du Nord, accueil"><img src="media/ocean-logo.png" alt="Océan du Nord — Sécurité, confort, fiabilité"></a>
+<nav aria-label="Navigation"><a href="#voyages">Voyages</a><a href="#suivi">Colis</a><a href="#services">Services</a><a href="#agences">Agences</a><a href="#onc">Carte ONC</a></nav></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+<div>
+<p class="eyebrow in" style="--i:0"><i></i>Votre route, votre horizon</p>
+<h1 class="in" style="--i:1">Le Congo vous va <em>si bien.</em></h1>
+<p class="lead in" style="--i:2">De Brazzaville à Pointe-Noire, explorez les destinations desservies, consultez les horaires et préparez votre prochain voyage.</p>
+<form class="search glass in" style="--i:3" id="sf">
+<label>Départ<select id="from"><option value="">Toutes les villes</option></select></label>
+<label>Arrivée<select id="to"><option value="">Toutes les villes</option></select></label>
+<label>Date<input type="date" id="date"></label>
+<label>Passagers<select id="pax"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></label>
+<button class="btn" type="submit">Voir les départs</button>
+</form>
+</div>
+<div class="map glass in" style="--i:4"><svg id="map" viewBox="0 0 410 450" role="img" aria-label="Carte du Congo-Brazzaville avec les lignes de bus"></svg></div>
+</div>
+<div class="wrap road" aria-hidden="true"><svg class="bus" viewBox="0 0 240 90"><rect x="4" y="12" width="232" height="58" rx="16" fill="#fff" opacity=".95"/><rect x="4" y="52" width="232" height="10" fill="#2fd18b"/><rect x="4" y="62" width="232" height="8" fill="#ffc933"/><g fill="#0b3a4a" opacity=".92"><rect x="16" y="20" width="36" height="26" rx="7"/><rect x="58" y="20" width="36" height="26" rx="7"/><rect x="100" y="20" width="36" height="26" rx="7"/><rect x="142" y="20" width="36" height="26" rx="7"/><rect x="190" y="18" width="38" height="32" rx="9"/></g><g fill="#111"><circle cx="54" cy="72" r="14"/><circle cx="188" cy="72" r="14"/></g><g fill="#ddd"><circle cx="54" cy="72" r="6"/><circle cx="188" cy="72" r="6"/></g></svg></div>
+</div>
+
+<section aria-label="Découvrir le Congo"><div class="wrap"><article class="story glass lift"><figure><img src="media/congo-discovery.jpg" alt="Visuel Océan du Nord autour du voyage découverte au Congo" loading="lazy"><figcaption>Voyage découverte · Visuel de la campagne Océan du Nord</figcaption></figure><div class="story-copy"><p class="eyebrow"><i></i>Cap sur le Congo</p><h2>La route fait partie du voyage.</h2><p>Découvrez les paysages et les destinations mis à l’honneur par Océan du Nord, puis choisissez votre axe pour préparer le départ.</p><div class="story-tags"><span>Brazzaville</span><span>Pointe-Noire</span><span>Et bien d’autres étapes</span></div></div></article></div></section>
+
+<section id="voyages"><div class="wrap">
+<h2>Nos voyages</h2>
+<p class="lead">Choisissez un départ pour le jour sélectionné. Tarifs affichés à titre indicatif : confirmez le prix et les disponibilités auprès d’une agence.</p>
+<div class="trips" id="trips" aria-live="polite"></div>
+</div></section>
+
+<section id="suivi"><div class="wrap">
+<h2>Suivre un colis</h2>
+<p class="lead">Entrez le numéro de votre reçu. Essayez ONC-1001, ONC-1002 ou ONC-1003.</p>
+<div class="track glass"><form class="tf" id="tf"><input class="fi" id="code" placeholder="ONC-1001" aria-label="Numéro de colis" autocomplete="off"><button class="btn">Suivre</button></form><div id="tres"></div></div>
+</div></section>
+
+<section id="services"><div class="wrap">
+<h2>Courrier, fret, location</h2>
+<p class="lead">Les bus d’Océan du Nord transportent aussi vos envois, et se louent pour vos déplacements de groupe.</p>
+<div class="grid3">
+<div class="svc glass lift"><svg viewBox="0 0 48 48"><rect x="6" y="11" width="36" height="26" rx="5"/><path d="M7 14l17 13 17-13"/></svg><h3>Courrier</h3><p>Plis et documents remis dans n’importe quelle agence, retirés à l’arrivée.</p></div>
+<div class="svc glass lift"><svg viewBox="0 0 48 48"><path d="M24 6l16 8v20l-16 8-16-8V14z"/><path d="M8 14l16 8 16-8M24 22v20"/></svg><h3>Fret</h3><p>Colis et marchandises sur les axes Nord et Sud, avec suivi à chaque étape.</p></div>
+<div class="svc glass lift"><svg viewBox="0 0 48 48"><rect x="5" y="9" width="38" height="26" rx="7"/><path d="M5 25h38"/><circle cx="14" cy="39" r="3.5"/><circle cx="34" cy="39" r="3.5"/></svg><h3>Location</h3><p>Un bus pour un mariage, une équipe ou un pèlerinage. Devis par téléphone.</p></div>
+</div></div></section>
+
+<section id="agences"><div class="wrap">
+<h2>Nos agences</h2>
+<p class="lead">Trouvez l’agence la plus proche et appelez-la en un geste.</p>
+<div class="chips" id="axes" role="group" aria-label="Filtrer par axe"></div>
+<div class="ags" id="ags"></div>
+</div></section>
+
+<section id="onc"><div class="wrap onc">
+<figure class="onc-poster"><img src="media/onc-cards.jpg" alt="Affiche officielle présentant les cartes de fidélité ONC Standard, Silver et Gold" loading="lazy"><figcaption>Visuel original des cartes ONC. Les conditions du programme sont à confirmer directement auprès de la compagnie.</figcaption></figure>
+<div class="onc-copy"><h2>La fidélité récompensée.</h2><p class="lead">Découvrez les cartes ONC et leurs avantages. Cette carte numérique est une démonstration locale, sans compte client ni points officiels.</p>
+<div class="card3d"><div class="vcard glass" id="vc"><b>Carte ONC · démo</b><div><div class="n" id="pts">0</div><small>points de démonstration</small></div><small id="holder">Votre nom ici</small></div></div>
+<div class="meter"><i id="mt"></i></div><p id="tier" class="lead" style="margin:0 0 8px"></p>
+<form class="of glass" id="of"><input class="fi" id="on" placeholder="Nom et prénoms" required aria-label="Nom et prénoms" autocomplete="name"><button class="btn">Personnaliser la démo</button></form></div>
+</div></section>
+</main>
+
+<footer><div class="wrap">Océan du Nord · Avenue de l’OUA, Brazzaville · contact@oceandunord.com<br><small>Prototype non officiel : disponibilités, réservation, billets, paiements et points sont simulés. Aucun billet généré ici n’est valable pour voyager.</small></div></footer>
+<div class="mobile-book"><a class="btn" href="#voyages">Choisir un trajet · réserver</a></div>
+<dialog id="dlg"><div class="dc" id="dc"></div></dialog>
+
+<script>
+var $=function(i){return document.getElementById(i)};
+var ALL=[0,1,2,3,4,5,6],DN=["dim","lun","mar","mer","jeu","ven","sam"];
+var C={"Brazzaville":[224,409],"Pointe-Noire":[53,435],"Dolisie":[94,405],"Nkayi":[124,404],"Sibiti":[127,379],"Oyo":[258,252],"Ouesso":[262,114],"Okoyo":[182,270],"Kéllé":[185,200]};
+var T=[
+{a:"Brazzaville",b:"Pointe-Noire",p:9000,r:9000,d:ALL,h:"06h00 · 18h00"},
+{a:"Brazzaville",b:"Ouesso",p:9000,r:9000,d:ALL,h:"07h00"},
+{a:"Brazzaville",b:"Nkayi",p:7000,r:6000,d:ALL,h:"07h30 · 13h00"},
+{a:"Brazzaville",b:"Oyo",p:6000,r:6000,d:ALL,h:"08h00 · 14h00"},
+{a:"Brazzaville",b:"Okoyo",p:10000,r:10000,d:[3,5],h:"06h30"},
+{a:"Brazzaville",b:"Kéllé",p:15000,r:12000,d:[2,6],h:"06h00"},
+{a:"Pointe-Noire",b:"Sibiti",p:10000,r:10000,d:[2,6],h:"07h00"},
+{a:"Pointe-Noire",b:"Nkayi",p:6000,r:6000,d:ALL,h:"08h30"}];
+var AG=[
+{n:"Angola libre",x:"Nord",ad:"Avenue de l’OUA, Brazzaville",t:["00242067048874"]},
+{n:"Betou",x:"Nord",ad:"Grande avenue, entre le grand marché et la banque postale",t:["00242050811966","00242066733435"]},
+{n:"Bouansa",x:"Sud",ad:"En face de la station Total, au monastère",t:["00242065117807","00242054403045"]},
+{n:"Boundji",x:"Nord",ad:"Adresse à confirmer",t:["00242065090852"]},
+{n:"Diata",x:"Nord",ad:"Avenue 5 Février, Brazzaville",t:["00242067048873"]},
+{n:"Direction Générale (Mikalou)",x:"Nord",ad:"1, rue Ango, avenue de la Tsiémé",t:["00242065874460"]},
+{n:"Djambala",x:"Nord",ad:"Rond-point, avenue Fulbert Youlou",t:["00242065958486"]},
+{n:"Dolisie",x:"Sud",ad:"04 rue Jolie, grand marché",t:["00242065002798","00242050720238"]}];
+var COLIS={"ONC-1001":3,"ONC-1002":5,"ONC-1003":2};
+var LAB=["Reçu","Chargé","En route","À destination","Retiré"];
+var fmt=function(n){return n.toLocaleString("fr-FR")+" FCFA"};
+var esc=function(s){var d=document.createElement("div");d.textContent=s;return d.innerHTML};
+var ST={pts:0,name:""};
+try{var s0=JSON.parse(localStorage.getItem("onc")||"null");if(s0)ST=s0}catch(e){}
+function save(){try{localStorage.setItem("onc",JSON.stringify(ST))}catch(e){}}
+
+/* verre liquide : reflet qui suit le pointeur */
+document.addEventListener("pointermove",function(e){var g=e.target.closest&&e.target.closest(".glass");if(!g)return;var r=g.getBoundingClientRect();g.style.setProperty("--mx",(e.clientX-r.left)+"px");g.style.setProperty("--my",(e.clientY-r.top)+"px")});
+var vc=$("vc");vc.parentNode.addEventListener("pointermove",function(e){var r=vc.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;vc.style.transform="rotateY("+x*18+"deg) rotateX("+-y*18+"deg)"});
+vc.parentNode.addEventListener("pointerleave",function(){vc.style.transform=""});
+/* parallaxe des collines */
+var ticking=false;addEventListener("scroll",function(){if(ticking)return;ticking=true;requestAnimationFrame(function(){var y=scrollY;$("h1").style.transform="translateY("+(-y*.03)+"px)";$("h2").style.transform="translateY("+(-y*.06)+"px)";$("h3").style.transform="translateY("+(-y*.1)+"px)";ticking=false})},{passive:true});
+
+/* carte */
+var sel=-1;
+function curve(a,b){var p=C[a],q=C[b],mx=(p[0]+q[0])/2,my=(p[1]+q[1])/2,dx=q[0]-p[0],dy=q[1]-p[1];return"M"+p+" Q"+(mx-dy*.14)+","+(my+dx*.14)+" "+q}
+function map(){
+  var land="11.1,-3.9 11.9,-4.75 12.25,-4.7 12.45,-4.45 13.1,-4.65 13.8,-4.9 14.4,-4.5 15.0,-4.3 15.3,-4.3 16.2,-2.9 16.9,-2.2 17.7,0 17.9,1.2 18.0,2.2 18.6,3.1 18.6,3.7 17.7,3.6 16.5,3.5 16.1,2.3 15.2,2.2 14,2.2 13.2,2.2 12.5,1.3 12,0.9 11.5,-0.2 11.2,-1 11.9,-2 12.5,-2.3 12.6,-3 11.8,-3.5";
+  var pts=land.split(" ").map(function(p){var q=p.split(",");return((+q[0]-10.8)*50).toFixed(0)+","+((3.9-q[1])*50).toFixed(0)}).join(" ");
+  var h='<defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".3"/><stop offset="1" stop-color="#fff" stop-opacity=".05"/></linearGradient></defs><polygon class="land" fill="url(#lg)" points="'+pts+'"/>';
+  T.forEach(function(t,i){var d=curve(t.a,t.b);h+='<path class="rt" id="rt'+i+'" d="'+d+'" style="animation-delay:'+i*-.3+'s"/><path class="hit" data-r="'+i+'" d="'+d+'"/><circle r="4.2" fill="#fff"><animateMotion dur="'+(5+i*.7)+'s" repeatCount="indefinite" path="'+d+'"/></circle>'});
+  Object.keys(C).forEach(function(n){var c=C[n];h+='<g class="city" data-c="'+n+'" tabindex="0"><circle class="p" cx="'+c[0]+'" cy="'+c[1]+'" r="4"/><circle cx="'+c[0]+'" cy="'+c[1]+'" r="4.5" fill="#2fd18b" stroke="#fff" stroke-width="1.5"/><text x="'+(c[0]+8)+'" y="'+(c[1]+4)+'">'+n+'</text></g>'});
+  $("map").innerHTML=h;
+  [].forEach.call($("map").querySelectorAll(".hit"),function(e){e.onclick=function(){pick(+e.dataset.r)}});
+  [].forEach.call($("map").querySelectorAll(".city"),function(e){e.onclick=function(){$("from").value=$("from").value===e.dataset.c?"":e.dataset.c;$("to").value="";sel=-1;trips();$("voyages").scrollIntoView()}});
+}
+function pick(i){sel=i;$("from").value=T[i].a;$("to").value=T[i].b;trips();[].forEach.call(document.querySelectorAll(".rt"),function(r,k){r.classList.toggle("on",k===i)});$("voyages").scrollIntoView()}
+
+/* recherche */
+Object.keys(C).forEach(function(c){["from","to"].forEach(function(id){var o=document.createElement("option");o.value=o.textContent=c;$(id).appendChild(o)})});
+var now=new Date(),iso=function(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")};
+$("date").value=iso(now);$("date").min=iso(now);
+function wd(){var p=$("date").value.split("-");return new Date(+p[0],p[1]-1,+p[2]).getDay()}
+function match(t){var f=$("from").value,o=$("to").value;if(f&&f===o)return false;return(!f||f===t.a||f===t.b)&&(!o||o===t.a||o===t.b)}
+function trips(){
+  var w=wd(),l=T.map(function(t,i){return[t,i]}).filter(function(x){return match(x[0])});
+  if(!l.length){$("trips").innerHTML='<div class="empty glass">Aucun trajet direct entre ces deux villes. Choisissez Brazzaville ou Pointe-Noire comme étape.</div>';return}
+  $("trips").innerHTML=l.map(function(x){var t=x[0],i=x[1],ok=t.d.indexOf(w)>-1,days=t.d.length===7?"Tous les jours":t.d.map(function(d){return DN[d]}).join(" et ");
+    return'<div class="trip glass lift'+(i===sel?" sel":"")+'"><h3>'+t.a+' – '+t.b+'</h3><p>'+days+' · départs '+t.h+'</p><div class="row2"><div class="price">'+fmt(t.p)+'<small>'+(t.r!==t.p?"Autre tarif indiqué : "+fmt(t.r):"par passager")+'</small></div><button class="btn" data-i="'+i+'"'+(ok?"":" disabled")+'>'+(ok?"Réserver":"Pas de départ")+'</button></div></div>'}).join("");
+  [].forEach.call($("trips").querySelectorAll("button[data-i]"),function(b){b.onclick=function(){book(+b.dataset.i)}});
+}
+$("sf").onsubmit=function(e){e.preventDefault();sel=-1;trips();$("voyages").scrollIntoView()};
+$("date").onchange=trips;$("from").onchange=$("to").onchange=function(){sel=-1;trips()};
+
+/* réservation */
+function dt(){return $("date").value.split("-").reverse().join("/")}
+function ticketText(b){return"BILLET DE DÉMONSTRATION — NON VALABLE POUR VOYAGER\nRéférence : "+b.ref+"\nPassager : "+b.nom+"\nTéléphone : "+b.telephone+"\nTrajet : "+b.depart+" – "+b.arrivee+"\nDate : "+b.date+" à "+b.heure+"\nPassagers : "+b.passagers+"\nMontant indicatif : "+b.total+"\n\nRéservation et paiement non transmis à Océan du Nord."}
+function downloadTicket(b){var blob=new Blob([ticketText(b)],{type:"text/plain;charset=utf-8"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="billet-demo-"+b.ref+".txt";document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url)},1000)}
+function shareTicket(b){var text=ticketText(b);if(navigator.share){navigator.share({title:"Billet de démonstration Océan du Nord",text:text}).catch(function(){})}else if(navigator.clipboard){navigator.clipboard.writeText(text).then(function(){alert("Billet de démonstration copié." )}).catch(function(){alert("Le partage n’est pas disponible sur cet appareil.")})}else{alert("Le partage n’est pas disponible sur cet appareil.")}}
+function book(i){
+  var t=T[i],n=+$("pax").value,tot=t.p*n;
+  $("dc").innerHTML='<h3 style="font-size:1.7rem;font-weight:750">'+t.a+' – '+t.b+'</h3><p style="margin:0;color:var(--mut)">'+dt()+' · '+n+' passager'+(n>1?"s":"")+' · <b style="color:#fff">'+fmt(tot)+'</b></p><form id="bf" class="dc" style="padding:0"><label>Départ<select id="bh">'+t.h.split(" · ").map(function(h){return"<option>"+h+"</option>"}).join("")+'</select></label><label>Nom du passager<input id="bn" required autocomplete="name"></label><label>Téléphone<input id="bp" type="tel" inputmode="tel" required autocomplete="tel" placeholder="+242 06 000 00 00"></label><div class="pay"><label><input type="radio" name="pm" checked>Mobile Money (simulation)</label><label><input type="radio" name="pm">Paiement en agence (simulation)</label></div><div style="display:flex;gap:8px"><button class="btn" style="flex:1">Générer mon billet · démo</button><button type="button" class="btn g" id="bx">Annuler</button></div></form>';
+  $("dlg").showModal();$("bx").onclick=function(){$("dlg").close()};
+  $("bf").onsubmit=function(e){e.preventDefault();
+    var ref="ONC-"+Math.random().toString(36).slice(2,6).toUpperCase(),pt=Math.round(tot/100),passager=$("bn").value.trim(),telephone=$("bp").value.trim(),heure=$("bh").value;ST.pts+=pt;save();loyalty();
+    var billet={ref:ref,nom:passager,telephone:telephone,passagers:n,depart:t.a,arrivee:t.b,date:dt(),heure:heure,total:fmt(tot),points:pt};
+    $("dc").innerHTML='<h3 style="font-size:1.7rem;font-weight:750">Billet de démonstration</h3><div class="ticket"><div class="ref">'+ref+'</div><p style="margin:6px 0 0">'+esc(passager)+' · '+n+' passager'+(n>1?"s":"")+'<br>'+t.a+' – '+t.b+'<br>'+dt()+' à '+heure+'<br>'+fmt(tot)+'</p></div><p style="margin:0;color:var(--mut)">Billet fictif : réservation et paiement non transmis à la compagnie. Ne peut pas être utilisé pour voyager.</p><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn" id="dl">Télécharger</button><button class="btn g" id="sh">Partager</button><button class="btn g" id="cl">Fermer</button></div>';
+    $("dl").onclick=function(){downloadTicket(billet)};$("sh").onclick=function(){shareTicket(billet)};$("cl").onclick=function(){$("dlg").close()}};
+}
+
+/* colis */
+$("tf").onsubmit=function(e){e.preventDefault();var c=$("code").value.trim().toUpperCase(),k=COLIS[c];
+  if(!k){$("tres").innerHTML='<p class="lead" style="margin:16px 0 0">Numéro introuvable. Vérifiez le code de votre reçu, par exemple ONC-1001.</p>';return}
+  $("tres").innerHTML='<div class="steps"><u id="su"></u>'+LAB.map(function(l,i){return'<span data-k="'+i+'"><b>'+l+'</b></span>'}).join("")+'</div><div style="height:30px"></div>';
+  setTimeout(function(){$("su").style.width=((k-1)/4*100)+"%";[].forEach.call(document.querySelectorAll(".steps span"),function(s,i){setTimeout(function(){s.classList.toggle("on",i<k)},i*260)})},60)};
+
+/* agences */
+var axe="Tous";
+["Tous","Nord","Sud"].forEach(function(a){var b=document.createElement("button");b.className="chip";b.textContent=a;b.setAttribute("aria-pressed",String(a==="Tous"));b.onclick=function(){axe=a;[].forEach.call($("axes").children,function(x){x.setAttribute("aria-pressed",String(x===b))});ag()};$("axes").appendChild(b)});
+function ag(){$("ags").innerHTML=AG.filter(function(a){return axe==="Tous"||a.x===axe}).map(function(a){return'<div class="ag glass lift"><h3>'+a.n+'</h3><span class="axe">Axe '+a.x+'</span><p>'+a.ad+'</p>'+a.t.map(function(t){return'<a href="tel:'+t+'">'+t.replace(/^00242/,"+242 ")+'</a>'}).join("")+'</div>'}).join("")}
+
+/* fidélité */
+var TI=[["Découverte",0],["Habitué · démo",100],["Fidèle · démo",300]];
+function loyalty(){
+  $("pts").textContent=ST.pts;$("holder").textContent=ST.name||"Votre nom ici";
+  var c=TI.filter(function(t){return ST.pts>=t[1]}).pop(),nx=TI[TI.indexOf(c)+1];
+  $("mt").style.width=(nx?(ST.pts-c[1])/(nx[1]-c[1])*100:100)+"%";
+  $("tier").textContent="Palier "+c[0]+(nx?" · encore "+(nx[1]-ST.pts)+" points pour "+nx[0]:" · palier maximum atteint");
+}
+$("of").onsubmit=function(e){e.preventDefault();ST.name=$("on").value.trim();save();loyalty()};
+
+map();trips();ag();loyalty();
+</script>
+</body>
+</html>

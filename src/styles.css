@@ -1,0 +1,781 @@
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 400 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('./assets/fonts/instrument-sans-normal-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 400 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('./assets/fonts/instrument-sans-normal-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+    U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: italic;
+  font-weight: 400 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('./assets/fonts/instrument-sans-italic-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: italic;
+  font-weight: 400 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('./assets/fonts/instrument-sans-italic-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+    U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./assets/fonts/instrument-serif-normal-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./assets/fonts/instrument-serif-normal-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+    U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./assets/fonts/instrument-serif-italic-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./assets/fonts/instrument-serif-italic-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+    U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    font-family: 'Instrument Sans', system-ui, sans-serif;
+    color: #182018;
+    background: #f5f1e8;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'ss01' on;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+    scroll-padding-block-start: calc(7.5rem + env(safe-area-inset-top));
+  }
+
+  @media (min-width: 640px) {
+    html {
+      scroll-padding-block-start: calc(9.5rem + env(safe-area-inset-top));
+    }
+  }
+
+  @media (min-width: 1024px) {
+    html {
+      scroll-padding-block-start: calc(6.5rem + env(safe-area-inset-top));
+    }
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    background: #f5f1e8;
+    color: #182018;
+    line-height: 1.65;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+    color: inherit;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a,
+  button,
+  select,
+  [role='button'] {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  ::selection {
+    background: #9a4326;
+    color: #fcfaf5;
+  }
+
+  :focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+  }
+
+  body.dialog-open {
+    overflow: hidden;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply inline-flex items-center text-[0.74rem] font-semibold tracking-[0.01em] text-clay-deep;
+  }
+
+  .eyebrow-light {
+    @apply text-cream/70;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-[2px] bg-forest-deep px-6 py-3 text-[0.8rem] font-semibold text-cream transition-colors duration-150 hover:bg-ink;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-[2px] border border-ink/25 bg-transparent px-6 py-3 text-[0.8rem] font-semibold text-ink transition-colors duration-150 hover:border-ink hover:bg-ink hover:text-cream;
+  }
+
+  .btn-light {
+    @apply inline-flex items-center justify-center gap-2 rounded-[2px] bg-cream px-6 py-3 text-[0.8rem] font-semibold text-forest-deep transition-colors duration-150 hover:bg-sand;
+  }
+
+  .link-arrow {
+    @apply inline-flex items-center gap-2 border-b border-ink/30 pb-1 text-[0.78rem] font-semibold text-ink transition-colors duration-150 hover:border-ink hover:text-forest-deep;
+  }
+
+  .field {
+    @apply w-full min-w-0 rounded-[2px] border border-ink/20 bg-cream px-3.5 py-3 text-base font-medium text-ink outline-none transition-colors duration-150 placeholder:text-muted focus:border-ink;
+  }
+
+  .chip {
+    @apply rounded-[2px] border border-ink/20 px-3.5 py-2 text-[0.75rem] font-semibold text-muted transition-colors duration-150 hover:border-ink/40 hover:text-ink;
+  }
+
+  .chip-active {
+    @apply border-forest-deep bg-forest-deep text-cream hover:border-forest-deep hover:text-cream;
+  }
+
+  .photo-frame {
+    @apply relative w-full overflow-hidden rounded-[2px] border border-ink/10 bg-sand;
+  }
+
+  .photo-frame img {
+    @apply h-full w-full object-cover;
+  }
+
+  .service-tile {
+    @apply relative flex h-full flex-col border-t border-ink/20 pt-5 transition-colors duration-150;
+  }
+
+  .service-tile:hover {
+    @apply border-ink/50;
+  }
+
+  .service-tile:hover .service-icon {
+    @apply border-ink bg-ink text-cream;
+  }
+
+  .modal-backdrop {
+    @apply fixed inset-0 z-[60] flex items-end justify-center overflow-y-auto overscroll-contain bg-ink/50 p-0 sm:items-center sm:p-6;
+  }
+
+  .field:focus-visible,
+  .modal-panel :focus-visible {
+    outline: 2px solid #1f4635;
+    outline-offset: 2px;
+  }
+
+  .nav-link {
+    position: relative;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    inset-inline: 0;
+    bottom: -0.18rem;
+    height: 2px;
+    background: #c05b36;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .nav-link.is-active::after {
+    transform: scaleX(1);
+  }
+
+  .skip-link {
+    position: fixed;
+    inset-block-start: 0.75rem;
+    inset-inline-start: 1rem;
+    z-index: 90;
+    padding: 0.65rem 1rem;
+    background: #123126;
+    color: #fcfaf5;
+    font-size: 0.78rem;
+    font-weight: 600;
+    transform: translateY(-150%);
+    transition: transform 180ms ease-out;
+  }
+
+  .skip-link:focus {
+    transform: translateY(0);
+  }
+
+  .btn-primary:active,
+  .btn-secondary:active,
+  .btn-light:active {
+    transform: translateY(1px);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  .min-h-dvh {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+
+  .writing-vertical {
+    writing-mode: vertical-rl;
+  }
+
+  .tnum {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .progress-fill {
+    background: #9a4326;
+    transition: width 150ms linear;
+  }
+
+  .service-icon {
+    transition:
+      color 150ms ease-out,
+      background-color 150ms ease-out,
+      border-color 150ms ease-out;
+  }
+}
+
+@layer utilities {
+  .page-enter {
+    animation: page-enter 460ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .scroll-progress {
+    position: fixed;
+    inset-inline: 0;
+    top: 0;
+    z-index: 70;
+    height: 2px;
+    pointer-events: none;
+    background: rgba(252, 250, 245, 0.08);
+  }
+
+  .scroll-progress span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #d3a04a;
+    transform-origin: 0 50%;
+    will-change: transform;
+  }
+
+  .hero-line {
+    display: block;
+    overflow: hidden;
+  }
+
+  .hero-line > span {
+    display: block;
+    animation: line-rise 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-delay: var(--line-delay, 0ms);
+  }
+
+  .hero-fade {
+    animation: fade-up 780ms cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-delay: var(--fade-delay, 0ms);
+  }
+
+  .hero-image {
+    animation: image-wipe 1100ms cubic-bezier(0.22, 1, 0.36, 1) 220ms both;
+  }
+
+  .hero-video::-webkit-media-controls,
+  .hero-video::-webkit-media-controls-panel,
+  .hero-video::-webkit-media-controls-play-button,
+  .hero-video::-webkit-media-controls-start-playback-button {
+    display: none !important;
+    -webkit-appearance: none;
+  }
+
+  .hero-parallax {
+    transform: translate3d(0, var(--parallax-y, 0px), 0);
+    will-change: transform;
+  }
+
+  .hero-route {
+    animation: fade-in 900ms ease-out 900ms both;
+  }
+
+  .route-draw {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: route-draw 1700ms cubic-bezier(0.33, 1, 0.68, 1) 850ms both;
+  }
+
+  .word-rise-word {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: bottom;
+  }
+
+  .word-rise-inner {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(112%) rotate(1.5deg);
+    transform-origin: 0 100%;
+    transition:
+      opacity 620ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--word-delay, 0ms);
+  }
+
+  .word-rise.is-erected .word-rise-inner {
+    opacity: 1;
+    transform: translateY(0) rotate(0);
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+      opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 850ms cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .image-reveal {
+    opacity: 0;
+    transition: opacity 620ms ease-out;
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+
+  .image-reveal img {
+    transform: scale(1.035);
+    transition: transform 1200ms cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+
+  .image-reveal.is-visible {
+    opacity: 1;
+  }
+
+  .image-reveal.is-visible img {
+    transform: scale(1);
+  }
+
+  .filter-grid {
+    animation: fade-up 620ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .card-index {
+    animation: card-in 560ms cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-delay: calc(var(--card-index, 0) * 55ms);
+  }
+
+  .ticket-issued {
+    animation: ticket-issued 520ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .ticket-swap {
+    animation: ticket-swap 480ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .badge-pop {
+    animation: badge-pop 460ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  }
+
+  .modal-backdrop {
+    animation: backdrop-in 220ms ease-out both;
+  }
+
+  .modal-panel {
+    animation: modal-in 340ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .ticket-wave {
+    animation: wave-drift 18s linear infinite;
+  }
+
+  .ticket-notch {
+    position: absolute;
+    z-index: 3;
+    top: 8.7rem;
+    width: 18px;
+    height: 18px;
+    border-radius: 999px;
+    background: #f5f1e8;
+  }
+
+  .ticket-notch-start {
+    inset-inline-start: -9px;
+  }
+
+  .ticket-notch-end {
+    inset-inline-end: -9px;
+  }
+
+  .qr-in {
+    animation: qr-in 560ms cubic-bezier(0.22, 1, 0.36, 1) 160ms both;
+  }
+
+  .parcel-result {
+    animation: parcel-in 460ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .parcel-bar > div > div:first-child {
+    transform-origin: 0 50%;
+    animation: parcel-bar 620ms cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-delay: calc(var(--i, 0) * 70ms);
+  }
+
+  .download-spinner {
+    width: 0.9rem;
+    height: 0.9rem;
+    border: 2px solid rgba(252, 250, 245, 0.35);
+    border-top-color: #fcfaf5;
+    border-radius: 999px;
+    animation: spinner 700ms linear infinite;
+  }
+
+  .route-row {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  .route-list.is-visible .route-row {
+    animation: fade-up 620ms cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-delay: calc(var(--route-row, 0) * 70ms);
+  }
+
+  .map-route {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+  }
+
+  .map-figure.is-drawn .map-route {
+    animation: map-draw 1300ms cubic-bezier(0.33, 1, 0.68, 1) both;
+    animation-delay: calc(var(--route-index, 0) * 90ms + 220ms);
+  }
+
+  .map-river {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+  }
+
+  .map-figure.is-drawn .map-river {
+    animation: map-draw 1800ms cubic-bezier(0.33, 1, 0.68, 1) 120ms both;
+  }
+
+  .tile-arrow {
+    transition: transform 180ms ease-out;
+  }
+
+  .service-tile:hover .tile-arrow {
+    transform: translateX(3px);
+  }
+}
+
+@keyframes page-enter {
+  from { opacity: 0; transform: translateY(7px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes line-rise {
+  from { opacity: 0; transform: translateY(105%) rotate(1.5deg); }
+  to { opacity: 1; transform: translateY(0) rotate(0); }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes image-wipe {
+  from { clip-path: inset(0 0 100% 0); opacity: 0; }
+  to { clip-path: inset(0 0 0 0); opacity: 1; }
+}
+
+@keyframes route-draw {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes card-in {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes ticket-issued {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes ticket-swap {
+  from { opacity: 0.25; transform: translateY(10px) scale(0.99); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes badge-pop {
+  0% { opacity: 0; transform: scale(0.4); }
+  70% { opacity: 1; transform: scale(1.12); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes backdrop-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modal-in {
+  from { opacity: 0; transform: translateY(18px) scale(0.985); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes wave-drift {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(2.5rem, 1rem, 0); }
+}
+
+@keyframes qr-in {
+  from { opacity: 0; transform: scale(0.94); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes parcel-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes parcel-bar {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes spinner {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes map-draw {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes view-out {
+  to { opacity: 0; transform: translateY(-4px); }
+}
+
+@keyframes view-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+::view-transition-old(root) {
+  animation: view-out 180ms ease-in both;
+}
+
+::view-transition-new(root) {
+  animation: view-in 300ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@supports (view-transition-name: none) {
+  @media (min-width: 640px) {
+    .page-enter {
+      animation: none;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .page-enter,
+  .hero-line > span,
+  .hero-fade,
+  .hero-image,
+  .hero-route,
+  .route-draw,
+  .filter-grid,
+  .card-index,
+  .ticket-issued,
+  .ticket-swap,
+  .badge-pop,
+  .modal-backdrop,
+  .modal-panel,
+  .ticket-wave,
+  .qr-in,
+  .parcel-result,
+  .parcel-bar > div > div:first-child,
+  .route-list.is-visible .route-row,
+  .map-figure.is-drawn .map-route,
+  .map-figure.is-drawn .map-river {
+    animation: none !important;
+  }
+
+  .word-rise-inner,
+  .reveal,
+  .image-reveal,
+  .route-row {
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+    transition: none !important;
+  }
+
+  .image-reveal img {
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .download-spinner {
+    animation: none;
+  }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none !important;
+  }
+
+  .btn-primary:active,
+  .btn-secondary:active,
+  .btn-light:active {
+    transform: none;
+  }
+}
+
+@layer utilities {
+  .tilt-card {
+    transform: perspective(900px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
+    transform-style: preserve-3d;
+    transition: transform 220ms ease-out;
+    will-change: transform;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .tilt-card {
+    transform: none;
+    transition: none;
+    will-change: auto;
+  }
+}
+
+@media (max-width: 639px) {
+  .hero-parallax {
+    transform: none !important;
+    will-change: auto;
+  }
+
+  .map-figure .map-route,
+  .map-figure .map-river {
+    animation: none !important;
+    stroke-dashoffset: 0 !important;
+  }
+
+  .page-enter {
+    animation-duration: 240ms;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tilt-card {
+    transform: none !important;
+    transition: none !important;
+  }
+}

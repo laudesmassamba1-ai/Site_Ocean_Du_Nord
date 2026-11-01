@@ -1,0 +1,26 @@
+{
+  "name": "ocean-du-nord-web",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "deploy:github": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "jspdf": "^4.2.1",
+    "lucide-react": "^1.66.0",
+    "qrcode": "^1.5.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.6.2",
+    "gh-pages": "^6.3.0",
+    "postcss": "^8.5.32",
+    "tailwindcss": "^3.4.17",
+    "vite": "^6.3.0"
+  }
+}
